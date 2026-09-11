@@ -1,0 +1,119 @@
+{
+  "all_item_ids": [
+    "G01", "G02", "G03", "G04",
+    "V01", "V02", "V03", "V04",
+    "D01", "D02", "D03", "D04", "D05",
+    "T01", "T02", "T03", "T04", "T05",
+    "M01", "M02"
+  ],
+  "drawings": [
+    {
+      "drawing_id": "DRW-001",
+      "part_name": "Shaft Adapter",
+      "drawing_type": "manufacturing",
+      "description": "การบอกขนาดเชิงทรงกระบอกสมบูรณ์แบบ, ควบคุม Datum รันเอาท์ตามระบบ ISO 5459",
+      "expected_status": "pass",
+      "expected_failed_items": [],
+      "note": "Perfect validation."
+    },
+    {
+      "drawing_id": "DRW-002",
+      "part_name": "Mounting Flange",
+      "drawing_type": "manufacturing",
+      "description": "มี FCF คุมตำแหน่งรู (True Position) ด้วยสัญลักษณ์ขอบเขต MMC ถูกต้องตาม ASME Y14.5",
+      "expected_status": "pass",
+      "expected_failed_items": [],
+      "note": "GD&T syntax matches ASME Y14.5 flawlessly."
+    },
+    {
+      "drawing_id": "DRW-003",
+      "part_name": "Enclosure Base",
+      "drawing_type": "manufacturing",
+      "description": "แสดงภาพตัด (Section View) และลายตัด (Hatching) ของอลูมิเนียมหล่ออย่างสมบูรณ์แบบ",
+      "expected_status": "pass",
+      "expected_failed_items": [],
+      "note": "Section arrows and hatch lines match perfectly."
+    },
+    {
+      "drawing_id": "DRW-004",
+      "part_name": "Support Bracket",
+      "drawing_type": "manufacturing",
+      "description": "ใช้การฉายมุมที่สาม (3rd Angle) พร้อมระบุสัญลักษณ์บนบล็อกข้อมูลมุมขวาล่างชัดเจน",
+      "expected_status": "pass",
+      "expected_failed_items": [],
+      "note": "Metric title block filled correctly."
+    },
+    {
+      "drawing_id": "DRW-005",
+      "part_name": "Manifold Block",
+      "drawing_type": "manufacturing",
+      "description": "มีการระบุ Thread Callouts มาตรฐานเมตริกควบคู่กับการบอกความลึกของรูสว่านครบถ้วน",
+      "expected_status": "pass",
+      "expected_failed_items": [],
+      "note": "Deep hole metric thread spec checks out."
+    },
+    {
+      "drawing_id": "DRW-006",
+      "part_name": "Spur Gear Blank",
+      "drawing_type": "manufacturing",
+      "description": "ควบคุมแนวระนาบและความขนาน (Flatness & Parallelism) บนหน้าสัมผัสเกียร์ตามสเปก",
+      "expected_status": "pass",
+      "expected_failed_items": [],
+      "note": "Parallelism control verified."
+    },
+    {
+      "drawing_id": "DRW-007",
+      "part_name": "Linkage Arm",
+      "drawing_type": "manufacturing",
+      "description": "Issue: Double Dimensioning เกิดวงรอบขนาดซ้ำซ้อนบริเวณความยาวรวม (Over-constrained)",
+      "expected_status": "fail",
+      "expected_failed_items": ["D01"],
+      "note": "Total length is over-dimensioned without reference marks."
+    },
+    {
+      "drawing_id": "DRW-008",
+      "part_name": "Valve Cap",
+      "drawing_type": "manufacturing",
+      "description": "Issue: ขาดสัญลักษณ์เส้นศูนย์กลาง (Centerlines) ในภาพฉายด้านข้างของฟีเจอร์ทรงกระบอก",
+      "expected_status": "fail",
+      "expected_failed_items": ["V04"],
+      "note": "Cylindrical bores missing continuous centerlines in top view."
+    },
+    {
+      "drawing_id": "DRW-009",
+      "part_name": "Coupling Hub",
+      "drawing_type": "manufacturing",
+      "description": "Issue: ป้อนสัญลักษณ์วงกลม (\u00d8) ผิดพลาด โดยนำไปใส่หน้าขนาดที่เป็นรัศมี (R) โค้งมน",
+      "expected_status": "fail",
+      "expected_failed_items": ["D05"],
+      "note": "Fillet radius labeled with '\u00d8' symbol instead of 'R'."
+    },
+    {
+      "drawing_id": "DRW-010",
+      "part_name": "Slider Plate",
+      "drawing_type": "manufacturing",
+      "description": "Issue: ตัวกรอบ FCF ควบคุมพิกัดทางเรขาคณิต (GD&T) ลอย ไม่ผูกติดกับพื้นผิวหรือเส้นบอกขนาด",
+      "expected_status": "fail",
+      "expected_failed_items": ["T01", "T02"],
+      "note": "Positional FCF is detached from the feature; syntax orphan."
+    },
+    {
+      "drawing_id": "DRW-011",
+      "part_name": "Housing Cover",
+      "drawing_type": "manufacturing",
+      "description": "Issue: ในตารางบล็อกชื่อไม่มีการระบุหน่วยวัด (Units missing: mm หรือ inch) และไม่บอกมาตราส่วน",
+      "expected_status": "fail",
+      "expected_failed_items": ["G01", "G03"],
+      "note": "Title block lacks standard linear tolerance specification."
+    },
+    {
+      "drawing_id": "DRW-012",
+      "part_name": "Pivot Pin",
+      "drawing_type": "manufacturing",
+      "description": "Issue: มีการลากเส้นช่วยบอกขนาด (Extension Lines) ตัดทับซ้อนกับเส้นบอกขนาด (Dimension Lines) จนอ่านยาก",
+      "expected_status": "fail",
+      "expected_failed_items": ["D03"],
+      "note": "Intersecting extension lines break readability guidelines."
+    }
+  ]
+}

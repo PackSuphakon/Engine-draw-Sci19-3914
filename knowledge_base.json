@@ -1,0 +1,37 @@
+{
+  "checklist_id": "SOT-ENG-DRW-020",
+  "version": "2026.1",
+  "total_items": 20,
+  "categories": {
+    "GENERAL_METADATA": [
+      {"id": "G01", "item": "Title block is fully completed (Part Name, Dwg No, Scale, Units).", "standard": "ASME Y14.1 / ISO 7200"},
+      {"id": "G02", "item": "Projection method indicator (1st or 3rd angle) is explicitly shown.", "standard": "ISO 5456 / ASME Y14.3"},
+      {"id": "G03", "item": "Standard linear and angular tolerance block is defined and filled.", "standard": "ISO 2768 / ASME Y14.1"},
+      {"id": "G04", "item": "Material specification and surface finish requirements are stated.", "standard": "ISO 1302 / ASME Y14.36M"}
+    ],
+    "VIEW_INTEGRITY": [
+      {"id": "V01", "item": "Sufficient views are provided to completely define the part geometry.", "standard": "ASME Y14.3 / ISO 128-3"},
+      {"id": "V02", "item": "Section views have correct cutting plane lines and matching hatch patterns.", "standard": "ISO 128-40 / ASME Y14.3"},
+      {"id": "V03", "item": "Hidden lines are correctly formatted and consistently used where necessary.", "standard": "ISO 128-20"},
+      {"id": "V04", "item": "Centerlines and center marks are applied to all symmetrical and cylindrical features.", "standard": "ASME Y14.2 / ISO 128-20"}
+    ],
+    "DIMENSIONING_RULES": [
+      {"id": "D01", "item": "No duplicate or redundant dimensions are present (no double dimensioning).", "standard": "ASME Y14.5 / ISO 129-1"},
+      {"id": "D02", "item": "All dimensions match the active scale and are not hard-coded/overridden overrides.", "standard": "ASME Y14.5"},
+      {"id": "D03", "item": "Extension lines do not directly cross dimension lines where avoidable.", "standard": "ISO 129-1"},
+      {"id": "D04", "item": "Cylindrical features use the diameter symbol (\u00d8) preceding the value.", "standard": "ASME Y14.5 / ISO 129-1"},
+      {"id": "D05", "item": "Spherical or radius features use proper prefix symbols (S\u00d8, R, SR).", "standard": "ASME Y14.5"}
+    ],
+    "GDT_AND_TOLERANCING": [
+      {"id": "T01", "item": "Feature Control Frames (FCFs) are syntactically valid and properly attached.", "standard": "ASME Y14.5"},
+      {"id": "T02", "item": "Datum Feature Symbols are correctly labeled and referenced in the FCF.", "standard": "ASME Y14.5 / ISO 5459"},
+      {"id": "T03", "item": "Basic dimensions (boxed) are used for all positional and profile tolerancing.", "standard": "ASME Y14.5 / ISO 1101"},
+      {"id": "T04", "item": "Material condition modifiers (MMC/LMC) are applied only to features of size.", "standard": "ASME Y14.5"},
+      {"id": "T05", "item": "Surface texture symbols indicate required roughness values (Ra).", "standard": "ISO 4287 / ASME Y14.36M"}
+    ],
+    "MANUFACTURABILITY": [
+      {"id": "M01", "item": "Standard thread callouts specify pitch/class correctly (e.g., M10x1.5 or 3/8-16 UNC).", "standard": "ASME Y14.6 / ISO 6410"},
+      {"id": "M02", "item": "Clear notes define default edge breaks (e.g., REMOVE ALL BURRS / SHARP EDGES).", "standard": "ISO 13715"}
+    ]
+  }
+}
